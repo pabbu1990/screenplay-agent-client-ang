@@ -1,0 +1,51 @@
+
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div style="width:60%">
+      <form *ngIf="!isEdit && !isNewSubmitted"(ngSubmit)="onSubmitForm(f)" #f="ngForm" >
+        <h3>Add a new campground here:</h3>
+        <hr>
+        <div class="form-group">
+          <input class="form-control "type = "text" placeholder="campground name" ngModel name="username">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" name="image" placeholder="image url" ngModel name="image">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" type="text" name="description" placeholder="description" ngModel name="description">
+          </textarea>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
+        </div>
+      </form>
+      <form *ngIf="isEdit && !isEditSubmitted" [formGroup]="campForm" (ngSubmit)="onSubmitEditForm()" >
+        <h3>Edit your campground here:</h3>
+        <hr>
+        <div class="form-group">
+          <input class="form-control "type = "text" formControlName="name">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" name="image" formControlName="image">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" type="text" name="description" formControlName="description">
+          </textarea>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+        </div>
+      </form>
+      <div *ngIf="isNewSubmitted">
+        <h3>New campground added successfully!!</h3>
+        <p>Click the link below to go back to the campgrounds</p>
+      </div>
+      <div *ngIf="isEditSubmitted">
+        <h3>Changes Made !!</h3>
+        <p>Click the link below to go back to the campgrounds</p>
+      </div>
+      <a routerLink = "/campgrounds">Go to Campgrounds</a>
+    </div>
+  </div>
+</div>

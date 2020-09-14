@@ -1,0 +1,48 @@
+#cName {
+  padding-top: 20px;
+  padding-right: 30px;
+}
+.desc{
+  /*padding-left: 15px;*/
+  padding-bottom: 20px;
+
+}
+.campName {
+  /*margin-left: 5px;*/
+  margin-bottom: 50px;
+}
+
+#colorRed{
+  color: red;
+}
+#btnDude {
+  padding: 20px 20px;
+}
+
+#backToCampBtn {
+  padding: 20px 20px;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+.btn-success {
+  padding-bottom: 5px;
+}
+
+#heading {
+  text-align: center;
+}
+
+#empty  {
+  margin: 50px 50px;
+  text-align: center;
+}
+
+a {
+  cursor: pointer;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
